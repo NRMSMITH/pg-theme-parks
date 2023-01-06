@@ -6,9 +6,9 @@
     "jest": "^26.6.3"
   },
   "scripts": {
-    "test": "npm run setup-db jest",
+    "test": "npm run setup-db && PGDATABASE=theme_parks jest",
     "setup-db": "psql -f db/theme-parks.sql",
-    "seed": "PGDATABASE=theme_parks && node db/run-seed.js"
+    "seed": "PGDATABASE=theme_parks node db/run-seed.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "description": "Northcoders wants to get all the major theme parks to sign up to a service we will be creating to help theme park lovers find the best rides and food options at all the theme parks in the UK.",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "pg": "^8.8.0"
+    "pg": "^8.8.0",
+    "pg-format": "^1.0.4"
   }
 }

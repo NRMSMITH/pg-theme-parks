@@ -1,7 +1,7 @@
 const { Pool } = require("pg");
-// require("dotenv").config({ path: "../.env" });
+require("dotenv").config({ path: "../.env" });
 
-console.log(process.env.PGDATABASE);
+// console.log(process.env.PGDATABASE);
 
 if (!process.env.PGDATABASE) {
   throw new Error("No PGDATABASE configured");
@@ -9,6 +9,6 @@ if (!process.env.PGDATABASE) {
 
 const pool = new Pool();
 
-console.log(pool.password);
+// console.log(pool.password);
 
 module.exports = pool;
