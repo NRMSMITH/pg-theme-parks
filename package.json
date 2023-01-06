@@ -21,5 +21,8 @@
     "url": "https://github.com/northcoders/be-pg-themeparks/issues"
   },
   "homepage": "https://github.com/northcoders/be-pg-themeparks#readme",
-  "dependencies": {}
+  "description": "Northcoders wants to get all the major theme parks to sign up to a service we will be creating to help theme park lovers find the best rides and food options at all the theme parks in the UK.",
+  "dependencies": {
+    "pg": "^8.8.0"
+  }
 }

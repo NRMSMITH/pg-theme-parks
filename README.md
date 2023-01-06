@@ -8,13 +8,18 @@ Your tasks today will involve creating the tables, inserting the data and confir
 
 ### Task 1
 
-First you will need to create your databases, to do this run the `npm run setup-dbs` command.
+First you will need to create your databases, to do this run the `npm run setup-dbs` command. 
+### should be 'npm run setup-db'
 
 Now you have your databases you can create your database connection, to do this you'll need to update the `connection.js` file, we have already made the file but you'll need to add the code.
+
+### we spent a minute or two figuring out how to do this before realising the instructions were below - maybe this could be clearer
 
 - Install [node-postgres](https://node-postgres.com/)
 - Create a new [connection pool](https://node-postgres.com/features/connecting) in the `db/connection.js` file
 - Export the connection pool so that it is available for use in other files
+
+### we realised that the students might not know what a .end is and you said you would be discussing it on Thursday - it might be useful for them to have some info about it on Monday as they may use it on the conection pool link
 
 ### Task 2
 

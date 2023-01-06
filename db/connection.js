@@ -1,4 +1,9 @@
-/**
- * Create your connection to the DB in this file
- * and remember to export it
- */
+const { Pool } = require('pg');
+
+const pool = new Pool()
+
+pool.query('SELECT NOW()', (err, res) => {
+    console.log(err, res)
+})
+
+module.export = pool;
