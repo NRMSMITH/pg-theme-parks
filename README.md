@@ -8,7 +8,8 @@ Your tasks today will involve creating the tables, inserting the data and confir
 
 ### Task 1
 
-First you will need to create your databases, to do this run the `npm run setup-dbs` command. 
+First you will need to create your databases, to do this run the `npm run setup-dbs` command.
+
 ### should be 'npm run setup-db'
 
 Now you have your databases you can create your database connection, to do this you'll need to update the `connection.js` file, we have already made the file but you'll need to add the code.
@@ -58,6 +59,8 @@ You will need to install pg-format `npm install -D pg-format` to do this.
 
 Now we should have some parks data stored in our database, You can complete the `selectParks` function in models.js
 
+### Do you mean models/parks.js?
+
 In order to ensure this is working correctly we have written the tests for you.
 
 Feel free to add a .only to the first test to avoid a few errors if you wish.
@@ -71,6 +74,8 @@ If your table creation and inserting has worked as expected this test should pas
 In order to insert the rides to our database we have a couple of problems;
 The rides data has keys of `park_name` but the columns in our table need to have `park_id` inserted into them.
 
+### We had already called this park_id
+
 In order to be able to insert the rides data we will need to be able to work out which `park_id` goes with which `park_name`, in order to do this we will have to make some changes to the way we have implemented inserting the data in the seed file. We will need access to both the rows that have been inserted to the `parks` table.
 
 In order to access all of this data you will need to make sure the `insert` function is `returning` the data from the rows.
@@ -83,12 +88,14 @@ You should now be able to access the data in the `.then` block after you've inse
 
 create a function called `formatRides`, this function should take an array of rides and update the appropriate keys on each one, this is a utility function, write some tests for this function in `utils.test.js` and make sure to use TDD. Think about how you are going to ensure that each ride has the correct `park_id`.
 
+### We think the students should be directed to look in the data at /data/rides.js to see that difference
+
 ```js
 [
   {
-    ride_name: 'Tidal Wave',
+    ride_name: "Tidal Wave",
     year_opened: 2000,
-    park_name: 'Thorpe Park',
+    park_name: "Thorpe Park",
     votes: 1,
   },
 ];
@@ -99,7 +106,7 @@ will become
 ```js
 [
   {
-    ride_name: 'Tidal Wave',
+    ride_name: "Tidal Wave",
     year_opened: 2000,
     park_id: 1,
     votes: 1,
